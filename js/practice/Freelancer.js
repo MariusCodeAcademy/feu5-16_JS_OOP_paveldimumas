@@ -22,6 +22,7 @@ class Freelancer extends Employee {
   finishJob(jobId) {
     // surasti darba pagal id ir jam iskviesti uzbaigimo metoda
     const foundJob = this.jobs.find((jObj) => jObj.id === jobId);
+    // jei nerasta darbo su paduotu id
     if (!foundJob) {
       console.warn('tokio darbo nera');
       return;
@@ -32,6 +33,17 @@ class Freelancer extends Employee {
 
   paySallary() {
     // suskaiciuoti ir ismoketi atlyginima
+    // atrinkti tik pabaigtus darbus,
+    const doneJobs = this.jobs.filter((jObj) => jObj.done === true);
+    console.log('doneJobs ===', doneJobs);
+    // ir suskaiciuoti ju verte
+    const doneJobsPrice = doneJobs.reduce((total, jObj) => total + jObj.price, 0);
+    console.log('doneJobsPrice ===', doneJobsPrice);
+    // baigtu darbu jobs arr neturetu likti
+    // atrinkti nebaigtus darbus ir prilyginti jobs masyvui
+    this.jobs = this.jobs.filter((jObj) => jObj.done === false);
+    // verte grazinti
+    return doneJobsPrice;
   }
 }
 // papildomai inicijuojam jobs tuscia masyva sukuriant objekta
