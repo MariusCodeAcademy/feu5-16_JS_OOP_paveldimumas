@@ -18,8 +18,16 @@ class Freelancer extends Employee {
     this.jobs.push(jobObj);
   }
 
+  // jObj === {id: 'j_1', price: 250, title: 'Footer', done: false}
   finishJob(jobId) {
     // surasti darba pagal id ir jam iskviesti uzbaigimo metoda
+    const foundJob = this.jobs.find((jObj) => jObj.id === jobId);
+    if (!foundJob) {
+      console.warn('tokio darbo nera');
+      return;
+    }
+    foundJob.completeJob();
+    console.log(`${this.firstName} finished ${foundJob.title} for ${foundJob.price}`);
   }
 
   paySallary() {
