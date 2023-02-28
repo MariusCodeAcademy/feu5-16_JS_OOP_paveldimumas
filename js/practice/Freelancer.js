@@ -1,7 +1,7 @@
 'use strict';
 console.log('Freelancer.js file was loaded');
 
-// aprasysim klase, paveldim Employee
+// aprasysim klase Freelancer, paveldim Employee
 
 // papildomai inicijuojam jobs tuscia masyva sukuriant objekta
 
