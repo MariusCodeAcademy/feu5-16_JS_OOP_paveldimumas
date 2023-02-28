@@ -36,13 +36,13 @@ class Employee extends Person {
   }
 }
 
-const w1 = new Employee('Bill', 'Gates', 1970, 15);
+// const w1 = new Employee('Bill', 'Gates', 1970, 15);
 
-// prideti 8 val darbo
-w1.workHours(10);
-w1.workHours(20);
-w1.workHours(30);
-w1.calcPay();
-w1.pay();
+// // prideti 8 val darbo
+// w1.workHours(10);
+// w1.workHours(20);
+// w1.workHours(30);
+// w1.calcPay();
+// w1.pay();
 
-console.log('w1 ===', w1);
+// console.log('w1 ===', w1);
