@@ -8,7 +8,12 @@ const workers = [
 ];
 
 // bill nori didesnio valandinio
-workers[0].dollarPerHour = 100;
+// workers[0].#dollarPerHour = 100;
+// gaunam privacios savybes reiksme per sukurta getteri
+console.log('workers[0] ===', workers[0].dollarPerHour);
+
+// pakeisti valandini su setteriu
+workers[0].dollarPerHour = { rate: 20, pass: '123' };
 
 // dirba bill
 workers[0].workHours(10);

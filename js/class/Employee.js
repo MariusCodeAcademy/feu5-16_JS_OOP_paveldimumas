@@ -4,20 +4,34 @@ console.log('Emploee.js file was loaded');
 // sukurti Emploee klase
 // Emploee paveldi Person
 class Employee extends Person {
+  #dollarPerHour;
   constructor(firstname, lastname, bYear, hourlyRate) {
     super(firstname, lastname, bYear);
     // papildomai pridedam hourlyRate, hoursWorked inicijuojam i 0 kai sukuriam darbuotoja
-    this.dollarPerHour = hourlyRate;
+    this.#dollarPerHour = hourlyRate;
     this.hoursWorked = 0;
   }
   // metoda workHours() kurio pagalba pridedam valandu prie hoursWorked
   workHours(howMany) {
     this.hoursWorked += howMany;
   }
+  // getteris
+  get dollarPerHour() {
+    return this.#dollarPerHour;
+  }
+  // setteris
+  set dollarPerHour({ rate: newRate, pass: password }) {
+    // validacija
+    if (password === '123') {
+      this.#dollarPerHour = newRate;
+    } else {
+      console.warn('neteisingas slaptazodis');
+    }
+  }
 
   get calcPay() {
     // ka darom?
-    const toBePayed = this.dollarPerHour * this.hoursWorked;
+    const toBePayed = this.#dollarPerHour * this.hoursWorked;
     console.log('toBePayed ===', toBePayed);
     return toBePayed;
   }
