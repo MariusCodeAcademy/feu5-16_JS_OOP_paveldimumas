@@ -18,5 +18,12 @@ workers[2].workHours(170);
 
 // sukti cikla spausdinant algas
 workers.forEach((worker) => {
-  worker.pay();
+  const name = worker.fullName;
+  console.log(name);
 });
+
+// gauti naujam masyve visu darbuotoju amziu
+const agesArr = workers.map((workerObj) => {
+  return workerObj.myAge();
+});
+console.log('agesArr ===', agesArr);

@@ -15,12 +15,13 @@ class Person {
 
   myAge() {
     const yearNow = new Date().getFullYear();
-    console.log('yearNow ===', yearNow);
+    // console.log('yearNow ===', yearNow);
     const age = yearNow - this.birthYear;
     console.log('age ===', age);
+    return age;
   }
 
-  fullName() {
+  get fullName() {
     return `${this.name} ${this.surname}`;
   }
 }
