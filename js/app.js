@@ -20,3 +20,8 @@ f1.finishJob('j_1');
 f1.finishJob('j_2');
 f1.paySallary();
 console.log('f1 po===', f1);
+
+const w1 = new MyWorker('Jane', 'Dow', 20);
+w1.work(160);
+
+console.log('w1 ===', w1);
