@@ -14,10 +14,35 @@ class Employee extends Person {
   workHours(howMany) {
     this.hoursWorked += howMany;
   }
+
+  calcPay() {
+    // ka darom?
+    const toBePayed = this.dollarPerHour * this.hoursWorked;
+    console.log('toBePayed ===', toBePayed);
+    return toBePayed;
+  }
+
+  pay() {
+    // ismoketi (grazinsim suma)
+    const payAmount = this.calcPay();
+    // log line
+    console.log(
+      `${this.fullName()} was payed ${payAmount} for ${
+        this.hoursWorked
+      } hours of hard work. thank you`
+    );
+    // nunulinsim valandas
+    this.hoursWorked = 0;
+  }
 }
 
 const w1 = new Employee('Bill', 'Gates', 1970, 15);
-console.log('w1 ===', w1);
 
 // prideti 8 val darbo
-// w1.workHours(160);
+w1.workHours(10);
+w1.workHours(20);
+w1.workHours(30);
+w1.calcPay();
+w1.pay();
+
+console.log('w1 ===', w1);
