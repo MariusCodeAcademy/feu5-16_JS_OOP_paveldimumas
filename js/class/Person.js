@@ -7,6 +7,7 @@ console.log('Person.js file was loaded');
 
 class Person {
   constructor(argName, argSurname, argBirthYear) {
+    console.log('Person constructor ivyko');
     this.name = argName;
     this.surname = argSurname;
     this.birthYear = argBirthYear;
