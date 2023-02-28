@@ -17,10 +17,10 @@ class MyWorker extends Employee {
     this.hoursWorked += qty;
   }
 
+  // metodas paySallary()
   paySallary() {
     const pay = this.hoursWorked * this.hourlyPay;
     this.hoursWorked = 0;
     return pay;
   }
-  // metodas paySallary()
 }
