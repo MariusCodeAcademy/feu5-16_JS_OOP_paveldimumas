@@ -9,6 +9,12 @@ class Freelancer extends Employee {
   // 1. asignJob(jobObj) - pridedam darba
   asignJob(jobObj) {
     // patikrinti ar jobObj yra sukurtas paga Job klase
+    // debugger;
+    if (!(jobObj instanceof Job)) {
+      console.warn('Only valid jobs please');
+      return;
+    }
+    // jobObj instanceof Job === true
     this.jobs.push(jobObj);
   }
 
@@ -21,9 +27,11 @@ class Freelancer extends Employee {
   }
 }
 // papildomai inicijuojam jobs tuscia masyva sukuriant objekta
-const f1 = new Freelancer('James', 'Band');
-f1.asignJob({ id: 'j_001', title: 'Header', price: 250, done: false });
-console.log('f1 ===', f1);
+// const f1 = new Freelancer('James', 'Band');
+// f1.asignJob({ id: 'j_001', titles: 'Header', price: 250, done: false });
+// f1.asignJob({ kazka: 'kazkas' });
+// f1.asignJob(jArr[0]);
+// console.log('f1 ===', f1);
 // metodai
 // 2. finishJob(jobId) - uzbaigiam darba
 // 3. paySallary() - ismoketi  atlyginima
