@@ -21,6 +21,10 @@ class Student extends Person {
     // mark yra skaicius
     this.mathGrades.push(mark);
   }
+  // metodo override
+  get fullName() {
+    return `Studentas ${this.name} ${this.surname}`;
+  }
 }
 
 const s1 = new Student('Jane', 'Dow', 1999, 'KTU', 1);
@@ -31,5 +35,5 @@ s1.addMathGrade(10);
 s1.addMathGrade('desimt');
 s1.addMathGrade(0);
 console.log('s1 ===', s1);
-console.log('s1.fullName() ===', s1.fullName());
-s1.myAge();
+console.log('s1.fullName() ===', s1.fullName);
+s1.myAge;
