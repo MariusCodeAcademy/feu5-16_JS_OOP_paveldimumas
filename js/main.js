@@ -6,6 +6,10 @@ const workers = [
   new Employee('James', 'Cameron', 1975, 100),
   new Employee('James', 'Bond', 1978, 10),
 ];
+
+// bill nori didesnio valandinio
+workers[0].dollarPerHour = 100;
+
 // dirba bill
 workers[0].workHours(10);
 workers[0].workHours(70);
@@ -18,12 +22,12 @@ workers[2].workHours(170);
 
 // sukti cikla spausdinant algas
 workers.forEach((worker) => {
-  const name = worker.fullName;
+  const name = worker.calcPay;
   console.log(name);
 });
 
 // gauti naujam masyve visu darbuotoju amziu
 const agesArr = workers.map((workerObj) => {
-  return workerObj.myAge();
+  return workerObj.myAge;
 });
 console.log('agesArr ===', agesArr);

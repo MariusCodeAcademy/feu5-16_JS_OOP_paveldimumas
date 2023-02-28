@@ -13,11 +13,11 @@ class Person {
     this.birthYear = argBirthYear;
   }
 
-  myAge() {
+  get myAge() {
     const yearNow = new Date().getFullYear();
     // console.log('yearNow ===', yearNow);
     const age = yearNow - this.birthYear;
-    console.log('age ===', age);
+    // console.log('age ===', age);
     return age;
   }
 

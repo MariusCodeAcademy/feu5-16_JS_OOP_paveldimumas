@@ -15,7 +15,7 @@ class Employee extends Person {
     this.hoursWorked += howMany;
   }
 
-  calcPay() {
+  get calcPay() {
     // ka darom?
     const toBePayed = this.dollarPerHour * this.hoursWorked;
     console.log('toBePayed ===', toBePayed);
