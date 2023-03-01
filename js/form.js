@@ -35,6 +35,9 @@ function newWorkerFormHandler(event) {
   }
   // console.log('newEmp ===', newEmp);
   createNewEmployee(newEmp);
+  // isvalyti name ir lastname po darb sukurimo
+  fNameEl.value = '';
+  lNameEl.value = '';
 }
 
 function toggleHourlyRate() {
@@ -56,6 +59,8 @@ function createNewEmployee(newEObj) {
   }
   // ir sukurti
   console.log('emplArr ===', emplArr);
+  // statinio metodo panaudojimas
+  GenHtml.addEmployee(newEObj);
 }
 
 // isvalyti name ir lastname po darb sukurimo
