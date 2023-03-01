@@ -37,7 +37,7 @@ const employees = [f1, f2, w1, w2];
 
 employees.forEach((eObj) => {
   const paySlip = `${eObj.fullName}: to be payed: ${eObj.paySallary()}`;
-  appDiv.insertAdjacentHTML('beforeend', `<h2>${paySlip}</h2>`);
+  // appDiv.insertAdjacentHTML('beforeend', `<h2>${paySlip}</h2>`);
 });
 
 console.log('employees ===', employees);
