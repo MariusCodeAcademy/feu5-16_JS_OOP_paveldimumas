@@ -16,7 +16,3 @@ class Employee {
     // tures buti igyvendintas vaikinese klasese
   }
 }
-// firstName, lastName savybes
-// fullName getteri
-
-// tuscia (imituojam abstraktu)  metoda paySallary()
